@@ -1,0 +1,23 @@
+<?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $databasename = "forever";
+
+    // Create Connection 
+
+    $conn = mysqli_connect($servername, $username, $password, $databasename);
+
+    // Get Connection 
+
+
+    if ($conn === false) {
+        echo "no database is selected";
+    }
+
+
+
+
+
+?>
