@@ -19,13 +19,15 @@
     $a = $_REQUEST['name'];
     $b = $_REQUEST['address'];
 
-    $sql = "INSERT INTO student(sname, saddress) VALUES ('$a', '$b')";
+    $ssql = "INSERT INTO student(sname, saddress) VALUES ('$a', '$b')";
 
-    $run = mysqli_query($conn, $sql);
+    $run = mysqli_query($conn, $ssql);
 
     if($run){ 
-        echo "<h3> data stored in database </h3>";
+        echo "<h3> data is successfully stored in database </h3>";
 
+    } else {
+        echo "Faild to insert!!";
     }
 
 
