@@ -3,11 +3,11 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $databasename = "forever";
+    $databasename = "Forever";
 
     // Create Connection 
 
-    $conn = mysqli_connect($servername, $username, $password, $databasename);
+    $conn = mysqli_connect($servername,$username,$password,$databasename);
 
     // Get Connection 
 
@@ -21,9 +21,11 @@
 
     $sql = "INSERT INTO student(sname, saddress) VALUES ('$a', '$b')";
 
+    $run = mysqli_query($conn, $sql);
 
-    if(mysqli_query($conn, $sql)){
-        
+    if($run){ 
+        echo "<h3> data stored in database </h3>";
+
     }
 
 
