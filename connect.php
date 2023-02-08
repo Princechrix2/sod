@@ -13,9 +13,18 @@
 
 
     if ($conn === false) {
-        echo "no database is selected";
+            echo "no database is selected";
     }
 
+    $a = $_REQUEST['name'];
+    $b = $_REQUEST['address'];
+
+    $sql = "INSERT INTO student(sname, saddress) VALUES ('$a', '$b')";
+
+
+    if(mysqli_query($conn, $sql)){
+        
+    }
 
 
 
